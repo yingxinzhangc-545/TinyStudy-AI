@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-UTF">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TinyStudy AI - Gentle Study Planner</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background-blob blob-1"></div>
+  <div class="background-blob blob-2"></div>
+
+  <main class="app">
+    <header class="app-header">
+      <div class="app-title-row">
+        <span class="app-logo"></span>
+        <div>
+          <h1 class="app-title">TinyStudy AI</h1>
+          <p class="app-subtitle">Your gentle AI study planner</p>
+        </div>
+      </div>
+      <p class="app-description">
+        Feeling overwhelmed? Tell TinyStudy what you need to study and how much time you have.
+        It will turn it into a soft, realistic plan with tiny steps and breaks. No pressure, just progress.
+      </p>
+    </header>
+
+    <section class="card">
+      <div class="field">
+        <label for="goal">What do you want to study?</label>
+        <textarea id="goal" placeholder="e.g. Review BIOL 200 lecture 5 and finish practice questions 1-10"></textarea>
+      </div>
+
+      <div class="field field-row">
+        <div class="field-half">
+          <label for="time">How much time do you have today?</label>
+          <input id="time" type="text" placeholder="e.g. 45 minutes, 1.5 hours">
+        </div>
+        <div class="field-half">
+          <label for="energy">How are you feeling right now?</label>
+          <select id="energy">
+            <option value="">Choose your vibe...</option>
+            <option value="energized">Energized & focused</option>
+            <option value="okay">Okay, but not 100%</option>
+            <option value="tired">Tired, low energy</option>
+            <option value="anxious">Anxious / stressed about studying</option>
+            <option value="distracted">Very distracted & unmotivated</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="generateBtn" class="primary-btn">Generate my gentle study plan</button>
+      <p class="hint">Tiny tip: it's okay if you don't finish everything. We're here for tiny, honest steps.</p>
+    </section>
+
+    <section class="card output-card">
+      <div class="output-header">
+        <h2>Your Study Plan</h2>
+        <span id="statusBadge" class="status-badge">Waiting for your details</span>
+      </div>
+      <div id="output" class="output-box">
+        Tell me what you want to study and how you're feeling. I'll create a cozy, realistic plan for you.
+      </div>
+    </section>
+
+    <footer class="app-footer">
+      <span>Made at HackCamp 2025 with</span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

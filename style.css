@@ -1,0 +1,233 @@
+:root {
+    --bg: #fff7fa;
+    --card-bg: #ffffff;
+    --accent-pink: #ff99b8;
+    --accent-pink-soft: #ffe0ec;
+    --accent-blue: #9ec9ff;
+    --text-main: #333444;
+    --text-soft: #777895;
+    --shadow-soft: 0 18px 40px rgba(255, 153, 184, 0.18);
+    --radius-lg: 22px;
+    --radius-md: 16px;
+    --radius-pill: 999px;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background: radial-gradient(circle at top left, #ffe9f3 0, #fff7fa 40%, #fdfbff 100%);
+    color: var(--text-main);
+  }
+  
+  .app {
+    max-width: 880px;
+    margin: 32px auto 40px;
+    padding: 0 16px 40px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .background-blob {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .blob-1 {
+    width: 260px;
+    height: 260px;
+    background: #ffd1e5;
+    top: -60px;
+    left: -40px;
+  }
+  
+  .blob-2 {
+    width: 260px;
+    height: 260px;
+    background: #cfe1ff;
+    bottom: -80px;
+    right: -40px;
+  }
+  
+  .app-header {
+    margin-bottom: 24px;
+  }
+  
+  .app-title-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  
+  .app-logo {
+    font-size: 32px;
+    background: linear-gradient(135deg, #ffb5d4, #9ec9ff);
+    border-radius: 22px;
+    padding: 6px 10px;
+    box-shadow: 0 12px 25px rgba(255, 153, 184, 0.25);
+  }
+  
+  .app-title {
+    margin: 0;
+    font-size: 28px;
+  }
+  
+  .app-subtitle {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-soft);
+  }
+  
+  .app-description {
+    font-size: 14px;
+    margin-top: 14px;
+    color: var(--text-soft);
+    line-height: 1.6;
+  }
+  
+  .card {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(255, 153, 184, 0.2);
+    padding: 20px;
+    margin-top: 18px;
+  }
+  
+  .field {
+    margin-bottom: 14px;
+  }
+  
+  .field-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .field-half {
+    flex: 1 1 180px;
+  }
+  
+  label {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    display: block;
+  }
+  
+  textarea,
+  input,
+  select {
+    width: 100%;
+    border-radius: var(--radius-md);
+    border: 1px solid #f1d5e4;
+    padding: 10px 12px;
+    font-size: 14px;
+    background: #fffdfd;
+    outline: none;
+    transition: 0.2s;
+  }
+  
+  textarea {
+    min-height: 72px;
+    resize: vertical;
+  }
+  
+  textarea::placeholder,
+  input::placeholder {
+    color: #bbaeb8;
+  }
+  
+  textarea:focus,
+  input:focus,
+  select:focus {
+    border-color: var(--accent-pink);
+    box-shadow: 0 0 0 3px rgba(255, 153, 184, 0.2);
+    background: #fffafc;
+  }
+  
+  .primary-btn {
+    margin-top: 8px;
+    padding: 10px 18px;
+    border-radius: var(--radius-pill);
+    background: linear-gradient(135deg, var(--accent-pink), var(--accent-blue));
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 12px 30px rgba(255, 153, 184, 0.4);
+    transition: 0.2s;
+  }
+  
+  .primary-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 16px 34px rgba(255, 153, 184, 0.45);
+  }
+  
+  .primary-btn:active {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+  
+  .hint {
+    font-size: 12px;
+    color: var(--text-soft);
+    margin-top: 8px;
+  }
+  
+  .output-card {
+    margin-top: 20px;
+  }
+  
+  .output-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .status-badge {
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: var(--radius-pill);
+    background: var(--accent-pink-soft);
+    color: #b54976;
+  }
+  
+  .status-badge.loading {
+    background: #e1ecff;
+    color: #315a9e;
+  }
+  
+  .status-badge.ready {
+    background: #e5ffe9;
+    color: #2d7b4c;
+  }
+  
+  .output-box {
+    margin-top: 8px;
+    border-radius: var(--radius-md);
+    border: 1px solid #f1d5e4;
+    background: linear-gradient(135deg, #fffdfd, #fff6fb);
+    padding: 14px;
+    min-height: 120px;
+    font-size: 14px;
+    color: #474a62;
+    line-height: 1.7;
+    white-space: pre-wrap;
+  }
+  
+  .app-footer {
+    margin-top: 20px;
+    font-size: 11px;
+    color: var(--text-soft);
+    text-align: center;
+  }
+  
