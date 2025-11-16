@@ -1,4 +1,4 @@
-const OPENROUTER_API_KEY = "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";
+const OPENROUTER_API_KEY = "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";
 
 async function generateStudyPlan(goal, time, energy) {
   const systemPrompt = `
@@ -65,14 +65,14 @@ generateBtn.addEventListener("click", async () => {
   const energy = energySelect.value;
 
   if (!goal || !time || !energy) {
-    outputBox.textContent = "Please fill all fields ❤️";
+    outputBox.textContent = "Please fill all fields";
     statusBadge.textContent = "Missing info";
     statusBadge.classList.remove("loading", "ready");
     return;
   }
 
   generateBtn.disabled = true;
-  generateBtn.textContent = "✨ Planning your session…";
+  generateBtn.textContent = "Planning your session…";
   statusBadge.textContent = "Thinking...";
   statusBadge.classList.add("loading");
   statusBadge.classList.remove("ready");
